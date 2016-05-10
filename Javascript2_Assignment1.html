@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Max and Min value</title>
+  <head>
+  <body>
+    <script>
+      var values = [23,67,1,34,98,34,69];
+      var  max = 0;
+      var min = null;
+
+      function Maximum() {
+        for (value in values) {
+          if (max < values[value]) {
+            max = values[value];
+          }
+        }
+        return max;
+      }
+
+      function Minimum() {
+        for (value in values) {
+          if (min == null) {
+            min = values[value];
+          }
+          else {
+            if (min > values[value]) {
+              min = values[value];
+            }
+          }
+        }
+        return min;
+      }
+      document.write("<p>Array = "+ values  + "<br /></p>");
+      document.write("<p>Max " + Maximum()  + "<br /></p>");
+      document.write("<p>Min " + Minimum()  + "<br /></p>");
+    </script>
+  </body>
+</html>
